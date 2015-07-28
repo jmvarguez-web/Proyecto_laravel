@@ -65,6 +65,7 @@ class IndexController extends BaseController {
 	 */
 	#index, create, show y edit son métodos GET. 
 	public function index()
+
 	{
 		$cart = $this->cart;
 		$productos = Productos::where('activo','<>',0)->get();
@@ -126,6 +127,12 @@ class IndexController extends BaseController {
 	}
 	
 
+		public function comentario(){
+		$cart = $this->cart;
+		$contacto = "open";
+		return View::make('comentario',compact('comentario','cart'))->with('menu',$this->menu);
+	}
+
 	public function postContact(){
 		$cart = $this->cart;
 		$contacto = "open";
@@ -135,16 +142,13 @@ class IndexController extends BaseController {
 		$campos['telefono'] = Input::get('telefono');
 		$campos['comments'] = Input::get('comments');
 		//$campos['captcha']=Input::get('captcha');
-		$validacion=Validator::make($campos,
-        [
+		$validacion=Validator::make($campos,[
             'nombre'	=>'required',
             'email'		=>'required',
             'telefono'	=>'required',
             'comments'	=>'required',
             //'captcha'   =>'required|captcha',
            // 'g-recaptcha-response' => 'required|recaptcha'
-
-
         ]);
         if($validacion->fails()){
 
@@ -463,5 +467,7 @@ public function getPaymentStatus()
         ->with('error', 'Payment failed');
 }
 //===================================================================	
+
+
 
 }//Fin de clase

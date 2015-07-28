@@ -112,7 +112,10 @@
         <!--<li><a href="index.html">Páginas</a></li>
         <li><a href="blog.html">Blog</a></li>-->
         <li><a href="{{route('contacto')}}">Contacto</a></li>
+        <li><a href="{{route('comentario')}}">Comentarios</a></li>
         <div class="clear"></div>
+        
+      
       </ul>
         </div>
     <div id="smart_nav"> <a class="navicon" href="#menu-left"> </a> </div>

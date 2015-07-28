@@ -172,6 +172,9 @@ Route::get('payment/status', array(
 
 
 
+Route::get('/comentario', array( 'uses'=>'IndexController@comentario',
+										'as'=>'comentario'));
+
 
 
 

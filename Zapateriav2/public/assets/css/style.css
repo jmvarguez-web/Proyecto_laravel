@@ -33,6 +33,23 @@ body {
 	background:#ffffff;
 	font-size: 100%;
 }
+
+#map-canvas{ max-width:750px; min-height:600px; height:auto;}
+#map-canvas img{ max-width:none;}
+.textocolor{ color:#000;}
+
+
+
+#burj { position: relative;
+
+width: 100%; padding-bottom: 100%;
+
+vertical-align: middle; margin: 0; overflow: hidden; }
+
+#burj svg { display: inline-block;
+
+position: absolute; top: 0; left: 0; }
+
 .wrap{
 	margin:0 auto;
 	width:80%;
@@ -2257,3 +2274,20 @@ span.color7{
     width: 100%;
     z-index: 12;
 }
+
+
+#map-canvas{ max-width:750px; min-height:600px; height:auto;}
+#map-canvas img{ max-width:none;}
+.textocolor{ color:#000;}
+
+
+
+#burj { position: relative;
+
+width: 100%; padding-bottom: 100%;
+
+vertical-align: middle; margin: 0; overflow: hidden; }
+
+#burj svg { display: inline-block;
+
+position: absolute; top: 0; left: 0; }
